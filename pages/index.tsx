@@ -69,9 +69,9 @@ const Home: NextPage = () => {
       <div className="container">
         <div style={{ flex: '1 1 auto' }}>
           <div style={{ padding: '24px 24px 24px 0' }}>
-            <h1>NFT Demo Mint</h1>
+            <h1>ticketchain</h1>
             <p style={{ margin: '12px 0 24px' }}>
-              {totalMinted} minted so far!
+              {totalMinted} purchased so far!
             </p>
             <ConnectButton />
 
@@ -96,8 +96,8 @@ const Home: NextPage = () => {
                 onClick={() => mint?.()}
               >
                 {isMintLoading && 'Waiting for approval'}
-                {isMintStarted && 'Minting...'}
-                {!isMintLoading && !isMintStarted && 'Mint'}
+                {isMintStarted && 'Buying...'}
+                {!isMintLoading && !isMintStarted && 'Buy for $59.99'}
               </button>
             )}
           </div>
@@ -108,7 +108,7 @@ const Home: NextPage = () => {
             <FrontCard isCardFlipped={isMinted}>
               <Image
                 layout="responsive"
-                src="/nft.png"
+                src="/taylorswift.jpg"
                 width="500"
                 height="500"
                 alt="RainbowKit Demo NFT"
@@ -119,15 +119,15 @@ const Home: NextPage = () => {
             <BackCard isCardFlipped={isMinted}>
               <div style={{ padding: 24 }}>
                 <Image
-                  src="/nft.png"
+                  src="/taylorswift.jpg"
                   width="80"
                   height="80"
                   alt="RainbowKit Demo NFT"
                   style={{ borderRadius: 8 }}
                 />
-                <h2 style={{ marginTop: 24, marginBottom: 6 }}>NFT Minted!</h2>
+                <h2 style={{ marginTop: 24, marginBottom: 6 }}>Ticket bought!</h2>
                 <p style={{ marginBottom: 24 }}>
-                  Your NFT will show up in your wallet in the next few minutes.
+                  Your ticket will show up in your wallet in the next few minutes.
                 </p>
                 <p style={{ marginBottom: 6 }}>
                   View on{' '}
